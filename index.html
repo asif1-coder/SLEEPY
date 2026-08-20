@@ -1,0 +1,581 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My SnowPaw 🌙❄️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= OPENING ================= -->
+
+    <section id="opening-screen" class="opening">
+
+        <div class="stars"></div>
+
+        <div class="opening-content">
+
+            <p class="small-title">A little place made just for you</p>
+
+            <h1>Hey, my SnowPaw ❤️</h1>
+
+            <p>
+                I heard you're tired… but your brain won't let you
+                properly rest.
+            </p>
+
+            <p>
+                So tonight, you don't have to think about anything.
+            </p>
+
+            <p>
+                Just stay here with me for a little while. 🌙
+            </p>
+
+            <button id="enter-btn">
+                ✨ Take me somewhere peaceful
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ROOM ================= -->
+
+    <main id="main-room" class="hidden">
+
+
+        <!-- MIDNIGHT ROOM -->
+
+        <section class="room-section">
+
+            <div class="room-overlay">
+
+                <p class="small-title">Your little midnight room</p>
+
+                <h2>Tonight, you can just rest. 🌙</h2>
+
+                <p class="rule">
+                    Tonight's only rule:
+                    <br>
+                    <strong>You don't have to do anything.</strong>
+                </p>
+
+                <div class="rest-list">
+
+                    <p>No studying.</p>
+                    <p>No overthinking.</p>
+                    <p>No worrying.</p>
+                    <p>No pretending you're okay.</p>
+
+                </div>
+
+                <p class="just-rest">
+                    Just rest. 🤍
+                </p>
+
+                <button
+                    id="comfort-btn"
+                    class="next-button">
+                    🫂 If I was there right now…
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HUG SECTION ================= -->
+
+        <section id="hug-section" class="section hug-section">
+
+            <p class="small-title">If I was there right now…</p>
+
+            <h2>Come here, Ice Queen. 🫂</h2>
+
+            <div id="hug-messages"></div>
+
+            <button id="hug-btn">
+                🫂 Come here
+            </button>
+
+        </section>
+
+
+        <!-- ================= BREATHING ================= -->
+
+        <section
+            id="breathing-section"
+            class="section breathing-section">
+
+            <p class="small-title">Slow down</p>
+
+            <h2>Now breathe with me. 🌬️</h2>
+
+            <div
+                id="breathing-circle"
+                class="breathing-circle">
+
+                <span id="breathing-text">
+                    BREATHE IN
+                </span>
+
+            </div>
+
+            <p class="breathing-note">
+                Nothing else matters for these few minutes.
+                <br>
+                Just breathe. 🤍
+            </p>
+
+            <button
+                id="continue-after-breathing"
+                class="next-button"
+                data-next="comfort-section">
+
+                I'm feeling calmer 🤍
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= COMFORT SOUNDS ================= -->
+
+        <section
+            id="comfort-section"
+            class="section comfort-section">
+
+            <p class="small-title">
+                Choose your comfort
+            </p>
+
+            <h2>What feels peaceful tonight?</h2>
+
+            <div class="sound-buttons">
+
+                <button data-sound="rain">
+                    🌧️ Rain
+                </button>
+
+                <button data-sound="ocean">
+                    🌊 Ocean
+                </button>
+
+                <button data-sound="fire">
+                    🔥 Fireplace
+                </button>
+
+            </div>
+
+            <div class="volume-area">
+
+                <label for="volume-control">
+                    🔊 Volume
+                </label>
+
+                <input
+                    id="volume-control"
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.25">
+
+            </div>
+
+            <audio
+                id="rain-audio"
+                src="sounds/rain.mp3"
+                loop>
+            </audio>
+
+            <audio
+                id="ocean-audio"
+                src="sounds/ocean.mp3"
+                loop>
+            </audio>
+
+            <audio
+                id="fire-audio"
+                src="sounds/fire.mp3"
+                loop>
+            </audio>
+
+            <button
+                class="next-button"
+                data-next="cat-section">
+
+                🐱 Meet someone sleepy
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= CAT GAME ================= -->
+
+        <section
+            id="cat-section"
+            class="section cat-section">
+
+            <p class="small-title">
+                A tiny sleepy visitor
+            </p>
+
+            <h2>Don't wake the cat… 🐱</h2>
+
+            <img
+                id="game-cat"
+                src="images/cat.jpg"
+                alt="Sleepy cat">
+
+            <p id="cat-message">
+                The cat is sleeping peacefully… 😴
+            </p>
+
+            <button
+                class="next-button"
+                data-next="memory-section">
+
+                💙 Things I want you to remember
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= MEMORY CARDS ================= -->
+
+        <section
+            id="memory-section"
+            class="section memory-section">
+
+            <p class="small-title">
+                Remember these
+            </p>
+
+            <h2>Things I want you to remember 💙</h2>
+
+            <div class="memory-grid">
+
+                <div class="memory-card">
+                    <h3>You're doing enough</h3>
+
+                    <p>
+                        You don't have to be productive every second.
+                        Resting isn't wasting time.
+                    </p>
+                </div>
+
+
+                <div class="memory-card">
+                    <h3>You're not alone</h3>
+
+                    <p>
+                        Even when I'm not physically beside you,
+                        you're still someone I care about deeply.
+                    </p>
+                </div>
+
+
+                <div class="memory-card">
+                    <h3>Tomorrow can wait</h3>
+
+                    <p>
+                        Whatever is bothering you doesn't need
+                        to be solved tonight.
+                    </p>
+                </div>
+
+
+                <div class="memory-card">
+                    <h3>Your headache</h3>
+
+                    <p>
+                        Drink some water, get comfortable,
+                        lower the brightness and give your mind
+                        some quiet time.
+                    </p>
+                </div>
+
+            </div>
+
+            <button
+                class="next-button"
+                data-next="letter-section">
+
+                💌 There's something for you
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= LETTER ================= -->
+
+        <section
+            id="letter-section"
+            class="section letter-section">
+
+            <p class="small-title">
+                Something I wanted you to have
+            </p>
+
+            <h2>💌 Open only when you really need me.</h2>
+
+            <button id="letter-btn">
+
+                💌 Open my letter
+
+            </button>
+
+            <div
+                id="letter"
+                class="letter hidden">
+
+                <p>
+                    My SnowPaw,
+                </p>
+
+                <p>
+                    I know some nights your mind just refuses
+                    to slow down.
+                </p>
+
+                <p>
+                    So I made this little place for you.
+                    Not to fix everything.
+                    Not to make all your worries disappear.
+                </p>
+
+                <p>
+                    Just to remind you that you don't have to
+                    carry everything at once.
+                </p>
+
+                <p>
+                    You can rest.
+                    You can be tired.
+                    You can have a bad day.
+                    You can simply exist.
+                </p>
+
+                <p>
+                    And even though I can't physically sit beside
+                    you right now…
+                    I wish I could.
+                </p>
+
+                <p>
+                    I'd probably tell you to stop thinking so much,
+                    put your head down and let me stay beside you. 🫂
+                </p>
+
+                <p>
+                    Sleep peacefully, my Ice Queen. 👑❄️
+                </p>
+
+                <p>
+                    ❤️
+                </p>
+
+            </div>
+
+            <button
+                class="next-button"
+                data-next="wish-section">
+
+                ⭐ Make a wish
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= WISH ================= -->
+
+        <section
+            id="wish-section"
+            class="section wish-section">
+
+            <p class="small-title">
+                Make a wish
+            </p>
+
+            <h2>Pick a star. ⭐</h2>
+
+            <p>
+                Maybe the universe has something
+                it wants you to hear tonight.
+            </p>
+
+            <div id="wish-stars"></div>
+
+            <div id="wish-message">
+                Tap one of the stars…
+            </div>
+
+            <button
+                class="next-button"
+                data-next="ice-section">
+
+                👑 Ice Queen Mode
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= ICE QUEEN ================= -->
+
+        <section
+            id="ice-section"
+            class="section ice-section">
+
+            <p class="small-title">
+                Because you're my Ice Queen 😂❄️
+            </p>
+
+            <h2>👑 ICE QUEEN MODE</h2>
+
+            <button id="ice-queen-btn">
+
+                👑 Activate Ice Queen Mode
+
+            </button>
+
+            <div
+                id="ice-message"
+                class="hidden">
+
+                <h2>
+                    ICE QUEEN HAS ENTERED
+                    REST MODE. 👑❄️
+                </h2>
+
+                <p>
+                    No responsibilities are allowed
+                    inside this room.
+                </p>
+
+            </div>
+
+            <button
+                class="next-button"
+                data-next="here-section">
+
+                ❤️ Continue
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= I'M HERE ================= -->
+
+        <section
+            id="here-section"
+            class="section here-section">
+
+            <p class="small-title">
+                Whenever you need me
+            </p>
+
+            <h2>❤️ I'm here.</h2>
+
+            <p>
+                Tap whenever you need me.
+            </p>
+
+            <button id="here-btn" class="heart-button">
+
+                ❤️
+
+            </button>
+
+            <div id="here-message">
+                Tap the heart.
+            </div>
+
+            <button
+                id="final-btn"
+                class="next-button hidden">
+
+                🌙 Goodnight
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= FINAL ================= -->
+
+        <section
+            id="final-section"
+            class="section final-section">
+
+            <p class="small-title">
+                Goodnight, SnowPaw
+            </p>
+
+            <h1>
+                Goodnight. 🌙❄️
+            </h1>
+
+            <p>
+                You don't need to fix everything tonight.
+            </p>
+
+            <p>
+                You don't need to think about tomorrow tonight.
+            </p>
+
+            <p>
+                You don't need to be strong tonight.
+            </p>
+
+            <p>
+                Just close your eyes.
+            </p>
+
+            <p>
+                Let your mind rest.
+            </p>
+
+            <p>
+                And remember that someone out here
+                is thinking about you. ❤️
+            </p>
+
+            <h2>
+                Sleep well, my Ice Queen. 👑
+            </h2>
+
+            <p>
+                I'll be here when you wake up.
+            </p>
+
+            <button id="goodnight-btn">
+
+                🌙 Goodnight ❤️
+
+            </button>
+
+            <h2 id="phone-down"></h2>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
